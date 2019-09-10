@@ -1,0 +1,26 @@
+<div>
+    <p *ngIf="tableInfo.length <=0" class="text-center mt-5 error"> No records Found</p>
+    <table class="table table-striped" *ngIf="tableInfo.length > 0">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Date</th>
+                <th scope="col">Open</th>
+                <th scope="col">High</th>
+                <th scope="col">Low</th>
+                <th scope="col">Volume</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of tableInfo; let i =index">
+                <th scope="row">{{i + 1}}</th>
+                <td>{{ item.Date | date: 'MMM dd, yyyy' }}</td>
+                <td>{{ item.Open | number }}</td>
+                <td>{{ item.High | number }}</td>
+
+                <td>{{ item.Low | number }}</td>
+                <td>{{ item.Volume | number }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
