@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  firebase: {
+  firebaseConfig: {
     apiKey: 'AIzaSyCFi--L39udmqbeJqYtsEKVP3e4gp3ds54',
     authDomain: 'task-challenger.firebaseapp.com',
     databaseURL: 'https://task-challenger.firebaseio.com',
