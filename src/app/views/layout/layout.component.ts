@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LayoutService } from './layout.service';
+import { LayoutService } from './layout.service'; // custom service for getting data from JSON file located in assets.
 
 @Component({
   selector: 'app-layout',
@@ -8,7 +8,7 @@ import { LayoutService } from './layout.service';
 })
 export class LayoutComponent implements OnInit {
   remoteData = []; // for sending data from parent to child components
-  isTableView = false;
+  isTableView = true; // Default view is table.
   constructor(private layoutService: LayoutService) { }
 
   ngOnInit() {
