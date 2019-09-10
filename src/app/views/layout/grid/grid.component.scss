@@ -1,0 +1,41 @@
+.card-body.change-padding {
+    padding: 5px;
+}
+
+.card.background-color-grey {
+    background-color: #80808021
+}
+
+.card.border-radius-35 {
+    border-radius: 35px !important;
+}
+
+@mixin labels {
+    font-size: 18px;
+    font-weight: 500;
+}
+.date-label {
+    color: green;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.high-label {
+    @include labels;
+    color: #a70a0a;
+}
+
+.low-label {
+    @include labels;
+    color: orange
+}
+
+.open-label {
+    @include labels;
+    color: #222296c9;
+}
+
+.volume-label {
+    @include labels;
+    color: #0a7486
+}

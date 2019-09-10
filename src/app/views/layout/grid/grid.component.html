@@ -1,1 +1,41 @@
-<p>grid works!</p>
+<div class="card background-color-grey" style="width:100%">
+    <div class="card-body">
+        <div class="d-flex flex-wrap">
+            <ng-container *ngFor="let grid of gridInfo;">
+                <div class="card ml-5 mb-5 shadow-lg p-3 bg-white rounded border-radius-35" style="width: 15rem;">
+                    <div class="card-body change-padding">
+                        <div class="d-flex justify-content-center">
+                            <p class="text-center">
+                                <span class="date-label">{{grid.Date | date: 'MMM dd, yyyy'}}</span>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="text-center">
+                                <span class="high-label">High</span>
+                                <br>
+                                <span>{{grid.High | number}}</span>
+                            </p>
+                            <p class="text-center">
+                                <span class="low-label">Low</span>
+                                <br>
+                                <span>{{grid.Low | number}}</span>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="text-center">
+                                <span class="open-label">Open</span>
+                                <br>
+                                <span>{{grid.Open | number}}</span>
+                            </p>
+                            <p class="text-center">
+                                <span class="volume-label">Volume</span>
+                                <br>
+                                <span>{{grid.Volume | number}}</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

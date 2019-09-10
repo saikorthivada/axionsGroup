@@ -8,7 +8,7 @@ import { LayoutService } from './layout.service';
 })
 export class LayoutComponent implements OnInit {
   remoteData = []; // for sending data from parent to child components
-  isTableView = true;
+  isTableView = false;
   constructor(private layoutService: LayoutService) { }
 
   ngOnInit() {
@@ -18,7 +18,6 @@ export class LayoutComponent implements OnInit {
   // by getting data from http call
   getRemoteInfo() {
     this.layoutService.getRemoteData().subscribe(res => {
-      console.log(res);
       this.remoteData = res;
     });
   }
